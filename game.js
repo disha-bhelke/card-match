@@ -108,8 +108,8 @@ game=()=>{
             localStorage.setItem('second_score',score2)
             display_names()
         }
-        cards.splice(x-1,1)
-        cards.splics(y-1,1)
+        // cards.splice(x-1,1)
+        // cards.splics(y-1,1)
     }
     else{
         let tempX=x;
@@ -120,15 +120,15 @@ game=()=>{
     x=0
     y=0
 
-    if (cards.length==0){
-        if (score1>score2){
-            alert(`${first_player} WINS!!`)
-        }
-        else if (score2>score1){
-            alert(`${second_player} WINS!!`)
-        }
-        else{
-            alert("IT'S A TIE!!")
-        }
-    }
+    // if (cards.length==0){
+    //     if (score1>score2){
+    //         alert(`${first_player} WINS!!`)
+    //     }
+    //     else if (score2>score1){
+    //         alert(`${second_player} WINS!!`)
+    //     }
+    //     else{
+    //         alert("IT'S A TIE!!")
+    //     }
+    // }
 }
