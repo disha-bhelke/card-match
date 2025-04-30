@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Card Match</title>
+  <style>
+    body {
+      height: 100vh;
+      background-color: #EA1F41;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner {
+      background-color: #FAB069;
+      border-radius: 5%;
+      padding: 40px 60px;
+      position: relative;
+      width: 87vw;
+      height: 82vh;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .about-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: white;
+      color: #EA1F41;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .about-btn:hover {
+      background-color: #ffe0e5;
+    }
+
+    #page {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3vh;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3vh;
+      background-color: #EA1F41;
+      padding: 30px;
+      border-radius: 5%;
+      width: 35%;
+    }
+
+    h2 {
+      margin: 0;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    input {
+      height: 5vh;
+      width: 80%;
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    #but {
+      background-color: #ff284b;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px;
+      cursor: pointer;
+    }
+
+    #but:hover {
+      background-color: #c71737;
+    }
+
+    #logo {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="inner">
+    <div class="header">CARD MATCH</div>
+    <button class="about-btn" onclick="window.location.href='about.html'">About</button>
+
+    <div id="page">
+      <form>
+        <h2>Player 1</h2>
+        <input type="text" id="player1" name="name" placeholder="Enter name" required />
+        <h2>Player 2</h2>
+        <input type="text" id="player2" name="name" placeholder="Enter name" required />
+        <button id="but" type="button" onclick="start()">START</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

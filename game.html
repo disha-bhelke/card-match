@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <!-- <link rel="stylesheet" href="game.css"> -->
+    <style>
+        :root {
+          --primary: #EA1F41;
+          --accent: #FAB069;
+          --text-dark: #333;
+          --card-bg: #EA1F41;
+          --btn-bg: #fff;
+          --btn-text: #EA1F41;
+        }
+    
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppins', sans-serif;
+          background-color: var(--primary);
+          color: var(--text-dark);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+    
+        .inner {
+          background-color: var(--accent);
+          border-radius: 30px;
+          padding: 3vh 4vh;
+          width: 95%;
+          max-width: 1200px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+    
+        .score_board {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 3vh;
+          margin-bottom: 2vh;
+        }
+    
+        .score_board #first {
+          display: flex;
+          gap: 2vh;
+          font-weight: 600;
+        }
+    
+        .card_grid {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap: 3vh 4vh;
+          justify-items: center;
+          align-items: center;
+        }
+    
+        .card_grid div {
+          background-color: var(--card-bg);
+          height: 15vh;
+          width: 10vh;
+          border-radius: 1.5vh;
+          cursor: pointer;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    
+        .card_grid div:hover {
+          transform: scale(1.05);
+          box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+    
+        #back {
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          padding: 0.7vh 2vh;
+          background-color: var(--btn-bg);
+          color: var(--btn-text);
+          font-weight: 600;
+          font-size: 1.8vh;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+    
+        #back:hover {
+          background-color: var(--btn-text);
+          color: var(--btn-bg);
+        }
+    
+        @media screen and (max-width: 768px) {
+          .score_board {
+            flex-direction: column;
+            gap: 2vh;
+            font-size: 2.5vh;
+          }
+    
+          .card_grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+    
+          .card_grid div {
+            height: 12vh;
+            width: 8vh;
+          }
+        }
+    
+      </style>
+</head>
+<body>
+    <div class="inner">
+        <div id="page">
+            <div class="score_board">
+                <div id="first">
+                    <div id="playe1"></div>
+                    <div id="sc1"></div>
+                </div>
+                <div id="first">
+                    <div id="playe2"></div>
+                    <div id="sc2"></div>
+                </div>
+            </div>
+
+            <button id="back" onclick="clear_storage()">EXIT</button>
+
+            <div class="card_grid">
+                <div id="card1" onclick="set(1)"></div>
+                <div id="card2" onclick="set(2)"></div>
+                <div id="card3" onclick="set(3)"></div>
+                <div id="card4" onclick="set(4)"></div>
+                <div id="card5" onclick="set(5)"></div>
+                <div id="card6" onclick="set(6)"></div>
+                <div id="card7" onclick="set(7)"></div>
+                <div id="card8" onclick="set(8)"></div>
+                <div id="card9" onclick="set(9)"></div>
+                <div id="card10" onclick="set(10)"></div>
+                <div id="card11" onclick="set(11)"></div>
+                <div id="card12" onclick="set(12)"></div>
+                <div id="card13" onclick="set(13)"></div>
+                <div id="card14" onclick="set(14)"></div>
+                <div id="card15" onclick="set(15)"></div>
+                <div id="card16" onclick="set(16)"></div>
+                <div id="card17" onclick="set(17)"></div>
+                <div id="card18" onclick="set(18)"></div>
+                <div id="card19" onclick="set(19)"></div>
+                <div id="card20" onclick="set(20)"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="game.js"></script>
+</body>
+</html>
